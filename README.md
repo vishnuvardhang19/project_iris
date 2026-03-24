@@ -52,9 +52,16 @@ In `Network settings`:
 Add the first inbound rule:
 
 - Type: `SSH`
-- Source type: `My IP`
+- Port range: `22`
+- Source type: `Anywhere-IPv4`
 
-This allows only your computer to connect to the server.
+AWS will fill:
+
+```text
+0.0.0.0/0
+```
+
+Use this because GitHub Actions must connect to your EC2 server over SSH.
 
 Add the second inbound rule:
 
@@ -97,9 +104,9 @@ EC2_HOST=YOUR_EC2_PUBLIC_IP
 Run these commands on your own machine:
 
 ```bash
-mv ~/Downloads/project-iris-key.pem ~/.ssh/project-iris-key.pem
-chmod 400 ~/.ssh/project-iris-key.pem
-ssh -i ~/.ssh/project-iris-key.pem ubuntu@YOUR_EC2_PUBLIC_IP
+mv ~/Downloads/project-iris-k.pem ~/.ssh/project-iris-k.pem
+chmod 400 ~/.ssh/project-iris-k.pem
+ssh -i ~/.ssh/project-iris-k.pem ubuntu@18.234.100.3
 ```
 
 Replace:
@@ -155,6 +162,12 @@ It must include:
 ...
 -----END OPENSSH PRIVATE KEY-----
 ```
+
+Do not paste:
+
+- only part of the key
+- the file path
+- the file name
 
 ## 6. Push the code
 
