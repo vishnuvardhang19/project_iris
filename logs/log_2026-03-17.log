@@ -1,0 +1,24 @@
+2026-03-17 16:46:21,745 - INFO - Read the data successfully...
+2026-03-17 16:46:21,745 - INFO - (150, 6)
+2026-03-17 16:46:21,746 - INFO -    Id  SepalLengthCm  SepalWidthCm  PetalLengthCm  PetalWidthCm      Species
+0   1            5.1           3.5            1.4           0.2  Iris-setosa
+1   2            4.9           3.0            1.4           0.2  Iris-setosa
+2   3            4.7           3.2            1.3           0.2  Iris-setosa
+3   4            4.6           3.1            1.5           0.2  Iris-setosa
+4   5            5.0           3.6            1.4           0.2  Iris-setosa
+2026-03-17 16:46:21,759 - INFO - Starting handling outliers....
+2026-03-17 16:46:21,767 - INFO - Handled outliers successfully....
+2026-03-17 16:46:21,768 - INFO - 0      3.5
+1      3.0
+2      3.2
+3      3.1
+4      3.6
+      ... 
+145    3.0
+146    2.5
+147    3.0
+148    3.4
+149    3.0
+Name: SepalWidthCm, Length: 150, dtype: float64
+2026-03-17 16:46:21,783 - INFO - Data splitted successfully....
+2026-03-17 16:46:21,794 - INFO - Files saved successfully for model training....
